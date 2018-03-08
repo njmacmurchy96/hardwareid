@@ -11,12 +11,12 @@ namespace HardwareIDGenerator
     {
         private static class WMI_CLASSES
         {
-        	public static readonly string[] MOTHERBOARD = { "Win32_BaseBoard", "Name", "Manufacturer", "Version" };
-        	public static readonly string[] GPU = { "Win32_VideoController", "Name", "DeviceID", "DriverVersion" };
+	    public static readonly string[] MOTHERBOARD = { "Win32_BaseBoard", "Name", "Manufacturer", "Version" };
+	    public static readonly string[] GPU = { "Win32_VideoController", "Name", "DeviceID", "DriverVersion" };
             public static readonly string[] CDROM = { "Win32_CDROMDrive", "Name", "Manufacturer", "DeviceID" };
             public static readonly string[] CPU = { "Win32_Processor", "Name", "Manufacturer", "ProcessorId" };
-        	public static readonly string[] HDD = { "Win32_DiskDrive", "Name", "Manufacturer", "Model" };
-        	public static readonly string[] BIOS = { "Win32_BIOS", "Name", "Manufacturer", "Version" };
+	    public static readonly string[] HDD = { "Win32_DiskDrive", "Name", "Manufacturer", "Model" };
+            public static readonly string[] BIOS = { "Win32_BIOS", "Name", "Manufacturer", "Version" };
         }
 
         public string LastID { get; private set; } = string.Empty;
