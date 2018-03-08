@@ -22,17 +22,22 @@ HWID.Generate();
 Console.WriteLine(HWID.LastID);
 ```
 
-The internal *GetProperty* function uses a string array as parameters { WMI Class, Properties... }
+The internal *GetProperties* function uses a string array named _wmiData_.
 ```cs  
 //                           Motherboard      --> Parameters
 // string[] MOTHERBOARD = { "Win32_BaseBoard", "Name", "Manufacturer", "Version" };
-GetProperties(string[] wmiData)
+GetProperties(WMI_CLASSES.MOTHERBOARD);
 
 private static string GetProcessorProperties()
 {
     return GetProperties(WMI_CLASSES.CPU);
 }
 ```  
+
+The information gathered is then hashed with SHA1 leaving the output of:
+```cs
+//Output: A7EA-FB91-9995-84B7-E843-CCB4-4E81-51B9-2B3B-6587
+```
 **License**  
 
 GNU GENERAL PUBLIC LICENSE Version 3, 29 June 2007
