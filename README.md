@@ -34,18 +34,18 @@ private static string GetProcessorProperties()
 
 VB.NET Syntax Usage:
 ```vb
-//Initialize instance of HardwareID
+'Initialize instance of HardwareID
 Dim HWID As New HardwareID()
 
-//Generate Unique ID based upon hardware of current PC
+'Generate Unique ID based upon hardware of current PC
 Console.WriteLine(HWID.Generate())
 
-//Every time Generate is called LastID is set
+'Every time Generate is called LastID is set
 Console.WriteLine(HWID.LastID)
 
-//The internal *GetProperties* function uses a string array that follows the format { WMI_CLASS, Properties... }. 
-//                                              Motherboard      --> Parameters
-// Dim MOTHERBOARD As String() = New String() { "Win32_BaseBoard", "Name", "Manufacturer", "Version" }
+'The internal *GetProperties* function uses a string array that follows the format { WMI_CLASS, Properties... }. 
+'                                              Motherboard      --> Parameters
+' Dim MOTHERBOARD As String() = New String() { "Win32_BaseBoard", "Name", "Manufacturer", "Version" }
 Private Shared Function GetProcessorProperties()
     Return GetProperties(WMI_CLASSES.CPU)
 End Function
