@@ -58,9 +58,9 @@ namespace HardwareIDGenerator
         	query.Append("SELECT ");
         	for (int i = 0; i < wmiData.Length; i++)
         		if (i == 0)
-        			wmiClass = wmiData[i];
-				else
-					query.Append( (i < wmiData.Length - 1) ? $"{wmiData[i]}, " : $"{wmiData[i]} " );
+			  wmiClass = wmiData[i];
+			else
+			  query.Append( (i < wmiData.Length - 1) ? $"{wmiData[i]}, " : $"{wmiData[i]} " );
         	query.Append($"FROM {wmiClass}");
         	return query.ToString();
         }
