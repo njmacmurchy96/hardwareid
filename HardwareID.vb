@@ -72,7 +72,7 @@ Public Class HardwareID
             Dim n1 = n And 15
             Dim n2 = (n >> 4) And 15
             If n2 > 9 Then
-                sBuilder.Append(ChrW((n2 - 10 + AscW("A"))).ToString(CultureInfo.InvariantCulture))
+                sBuilder.Append(ChrW((n2 - 10 + AscW("A"c))).ToString(CultureInfo.InvariantCulture))
             Else
                 sBuilder.Append(n2.ToString(CultureInfo.InvariantCulture))
             End If
