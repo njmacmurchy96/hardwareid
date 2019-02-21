@@ -1,5 +1,5 @@
 # C#/VB.NET Hardware ID Generator (HWID / HardwareID)
-An API that makes efficient use of the [Windows Management Instrument Win32 Providers](https://msdn.microsoft.com/en-us/library/aa394388(v=vs.85).aspx) to generate a unique identifier (Hardware ID) based upon the properties of the Motherboard, CDROM, BIOS, HDD, GPU, and CPU. This APIs main purpose is to allow software to remain locked to one PC (or multiple) depending it's used.
+An API that makes efficient use of the [Windows Management Instrument Win32 Providers](https://msdn.microsoft.com/en-us/library/aa394388(v=vs.85).aspx) to generate a unique identifier (Hardware ID) based upon the properties of the Motherboard, CDROM, BIOS, HDD, GPU, and CPU. This APIs main purpose is to allow software to remain locked to one PC (or multiple) depending upon its utilization.
 
 #### Windows Manage Instruments based on the Win32 Provider Classes (WMI) 
 - [Win32_BaseBoard](https://msdn.microsoft.com/en-us/library/aa394072(v=vs.85).aspx)
@@ -57,7 +57,11 @@ Every property gathered from the WMI class is hashed together with SHA1 and then
 ```  
 **Updates**
 - Increased speed and efficiency.
-- Found reliable properties of each piece of hardware.
+- Found reliable properties of each piece of hardware. 
+
+**TO-DO**
+- Further Optimize WMI Access & Query Generation
+- Check if Hardware Exists, if not then attempt other options (Runtime Error Prevention) 
 
 **Issues**
 - Assumes CDROMDrive exists.  
